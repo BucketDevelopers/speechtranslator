@@ -9,7 +9,7 @@ public class TransClass {
 	{
 		//Replace client_id and client_secret with your own.  
 	    Translate.setClientId("speechtrans1");
-	    Translate.setClientSecret("ZGc8q56kWfuSEJplym/uaAT2+v1USgok/5kMwI19oks=");
+	    Translate.setClientSecret("REPLACE-WITH-SECRET-KEY");
 	 
 	    // Translate text from lang1 to lang2
 	    Language l1=Language.valueOf(lang2);
