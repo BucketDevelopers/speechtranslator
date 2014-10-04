@@ -1,0 +1,89 @@
+create a directory where you will work on your project . 
+
+
+let the directory be at /home/user/projects/InterpreterProject where InterpreterProject is the working directory.
+
+
+BASIC SETUP INSTRUCTIONS:
+__________________________
+
+
+1. type cd /home/user/projects/InterpreterProject
+2. git init
+3. git remote add origin https://github.com/BucketDevelopers/speechtranslator.git
+4. git pull origin master
+5. type ls to check wether you got the source code.
+
+
+
+SETTING UP ECLIPSE AND LIBRARIES (the headache part)
+____________________________________________________
+
+1.File -> Import.
+2.In Select root directory , give the path as /home/user/projects/InterpreterProject
+3.Now Import the project interpreter.( Uncheck Copy into workspace to avoid creating duplicates )
+
+It should give a ! symbol and nothing else at this point on the imported project.
+
+4.Now go to File->Import->Git->Projects From Git->Clone URI
+
+5.In the URI field enter https://github.com/BucketDevelopers/java-speech-api.git
+6.Click on next -> make sure both branches ( api-example and master are selected )
+7.click next and choose a suitable location other than what you chose before ( ie DONT choose /home/user/projects/InterpreterProject ).
+This will help when you want to push changes onto github .
+
+8.Click next -> next -> finish.
+
+9.Now you should have both the necessary projects ( Interpreter and java-speech-api setup )
+It should give you error messages on both the projects.
+
+RESOLVING THE ERROR MESSAGES
+____________________________
+
+In ECLIPSE
+
+1.go to java-speech-api-git->src->com.darkprograms.speech.recognizer->FlacEncoder.java
+2.press ctrl+1 after placing cursor on the error import javaFlacEncoder.FLACEncoder (Basically Quick Fix) 
+select Fix Project Setup ... and select Add archive blah blah to the build path.
+
+3.Then go to GoogleResponse.java 
+4. In this line private List<String> otherPossibleResponses = new ArrayList<String>(20);
+do a quick fix ( Ctrl + 1) on the error.
+
+It should ask you to change project compliance to java 1.5 .. select that.
+
+5.Now finally for the last error. 
+Go to project Menu -> properties -> Java Compiler-> Errors/Warning -> check Enable Project Specific Settings.
+
+6.In the deprecated and restricted API , change the setting for forbidden reference to warning from error.
+
+Press Ok . 
+Thats it !! 
+
+
+
+PROJECT STRUCTURE
+_________________
+
+Just so that everyone is clear.
+
+Our main project is Interpreter project.
+java-speech-api is just our library project ( J.A.R.V.I.S )
+
+so most of the work will be in interpreter project 
+
+I have divided the interpreter into two packages 
+
+com.bucketdevelopers.Interpreter and com.bucketdevelopers.libs
+
+com.bucketdevelopers.Interpreter will contain most of the real code .
+
+while in com.bucketdevelopers.libs you can create helper classes like Mp3Player etc.
+
+This will make it organised and easy for everyone to debug and understand.
+
+
+
+AND if u feel uncomfortable initially to follow the project structure .. u can just place the files and classes randomly . I ll restructure them later. No problems !  :)
+
+Phew! Finally basic intructions Done.. 
