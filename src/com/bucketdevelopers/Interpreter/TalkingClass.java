@@ -20,9 +20,13 @@ public class TalkingClass {
 		//String language = "en-in";// English (IN) language code //If you want to
 									// specify a language use the ISO code for
 									// your country. Ex: en-us
+		System.out.println("TALK: ");
+		
 		if(language==null){
 			language = "auto";
 		}
+		language="fr-FR";
+		
 		Synthesiser synth = new Synthesiser(language);
 		try {
 			InputStream is = synth.getMP3Data(text);
