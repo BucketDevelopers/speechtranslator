@@ -4,5 +4,12 @@ Speech Translator
 Speech Translator which could translate a spoken sentence from one language to another
 
 
-Status: Speech Synthesis added !
-        Text Translation added
+
+Status: 
+        
+        Finished !
+
+
+        Speech Synthesis added ! - Atul
+        Text Translation added ! - Aparna
+        Speech Recognition added ! - Bhavya
